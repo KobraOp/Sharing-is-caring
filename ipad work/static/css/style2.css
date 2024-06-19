@@ -1,0 +1,47 @@
+body {
+    background-color: #000;
+    color: #000;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.list-group-item {
+    background-color: #333;
+    color: #000;
+    border: 1px solid #444;
+}
+
+.list-group-item .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.list-group-item .btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.list-group-item .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}

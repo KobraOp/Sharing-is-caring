@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Upload Image</title>
+</head>
+<body class="type--A">
+
+<div class="container">
+    <div class="drop-container">
+        <div class="drop-title">Drop your file here</div>
+        <form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+            <label for="file" class="button">
+                <input type="file" id="file" name="file" accept="image/*" required class="button__text">
+                <span class="button__line"></span>
+                <span class="button__line"></span>
+                <span class="button__drow1"></span>
+                <span class="button__drow2"></span>
+            </label>
+            <button type="submit" class="button">Upload</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+
+</body>
+</html>
